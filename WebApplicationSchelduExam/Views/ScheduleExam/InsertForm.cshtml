@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>InsertForm</title>
+</head>
+<body>
+    <div>
+        <h2> Form for create new exam   </h2>
+        <form action="@Url.Action("Insert","Scheduleexam")" method="post">
+            <label> Subject <input type="text" name="subject" /></label><br />
+            <label> Date <input type="text" name="date" /></label><br />
+            <label> Mark <input type="number" name="mark" /></label><br />
+
+            <input type="submit" value="Create" />
+        </form>
+        <a href="@Url.Action("Index","Scheduleexam")">Go to main page</a>
+    </div>
+</body>
+</html>

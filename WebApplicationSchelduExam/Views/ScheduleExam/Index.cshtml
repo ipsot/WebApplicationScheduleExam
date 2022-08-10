@@ -1,0 +1,34 @@
+﻿@model List<WebApplicationSchelduExam.Model.Entities.Scheldue>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <table border="1">
+            <tr>
+                <td>Id</td>
+                <td>Subject</td>
+                <td>Date</td>
+                <td>Mark</td>
+            </tr>
+            @foreach (var scheldue in Model)
+            {
+                <tr>
+                    <td>@scheldue.Id</td>
+                    <td>@scheldue.Subject</td>
+                    <td>@scheldue.Date</td>
+                    <td>@scheldue.Mark</td>
+                    <td><a href="@Url.Action("Delete","Scheduleexam",new { id=scheldue.Id})">DELETE</a>
+                </tr>
+            }
+        </table>
+    </div>
+    <div>
+        <a href="@Url.Action("OpenInsertForm","Scheduleexam")">Create New Exam</a>
+    </div>
+    </body>
+</html>
